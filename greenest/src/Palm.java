@@ -1,4 +1,4 @@
-public class Palm extends Vaxt { //arv, subklass till V채xt som bygger vidare p책 v채xtklassen, 채rver f채lt och metoder
+public class Palm extends Vaxt { //arv
 
     public Palm (String vaxtNamn, double langd) {
             super(vaxtNamn, langd);
@@ -6,12 +6,12 @@ public class Palm extends Vaxt { //arv, subklass till V채xt som bygger vidare p�
 
 
     @Override
-    public double totalVatskeMangd() {  // Polymorfism och arv: Palmklassen implementerar sin egen version av den abstrakta metoden i Vaxt.
+    public double totalVatskeMangd() {  // Polymorfism och arv
         return VatskeTyp.KRANVATTEN.getMangd()* langd;
     }
 
     @Override
-    public String getVatskeTyp() { // Polymorfism och arv:
+    public String getVatskeTyp() { // Polymorfism och arv
             return VatskeTyp.KRANVATTEN.getVatskaTxt();
     }
 

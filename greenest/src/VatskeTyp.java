@@ -1,4 +1,4 @@
-public enum VatskeTyp { // Enum: Definierar en bestämd uppsättning namngivna konstanter, här är vätsketyp och mängd konstanter.
+public enum VatskeTyp {
 
     MINERALVATTEN(0.02, "Mineralvatten"), //cl omvandlat till liter
     KRANVATTEN (0.5, "Kranvatten"),
@@ -6,14 +6,14 @@ public enum VatskeTyp { // Enum: Definierar en bestämd uppsättning namngivna k
     BASNIVA(0.1, "Basnivå");
 
     private final String vatskaTxt;
-    private final double mangd; // Inkapsling: Värdet är privat och kan inte ändras efter att det satts.
+    private final double mangd; // Inkapsling
 
     VatskeTyp (double mangd, String vatskaTxt) {
         this.mangd = mangd;
         this.vatskaTxt= vatskaTxt;
     }
 
-    public double getMangd() {  // Beräkningarna behöver använda gettern pga privat värde
+    public double getMangd() {
         return mangd;
     }
 

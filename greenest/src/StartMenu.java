@@ -2,9 +2,7 @@ import javax.swing.*;
 
 import java.util.Scanner;
 
-
 public class StartMenu {
-    // Styr huvudmenyn och hanterar användarens menyval.
 
     public void showMainMenu(){
         VaxtHotell hotell = new VaxtHotell();

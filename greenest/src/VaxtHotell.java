@@ -4,13 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VaxtHotell {
-    // Lagrar hotellets växter och hanterar sökning efter en växt.
 
     private List<Vaxt> vaxter = new ArrayList<>();
-    //Inkapsling: private gör att listan bara kan nås direkt inom VaxtHotell.
+    //Inkapsling
 
-
-    public static void printMeny(){  // Visar huvudmenyn och returnerar användarens val, eller null vid Avbryt.
+    public static void printMeny(){
         System.out.println("\nVälkommen till Växthotellet Greenest!");
         System.out.println("1.Visa alla incheckade växter");
         System.out.println("2.Sök efter växtens vätskebehov");
@@ -18,7 +16,7 @@ public class VaxtHotell {
 
     }
 
-    public void addBefintligVaxt() {   //Metod som lägger till befintliga växterna i listan
+    public void addBefintligVaxt() {
         vaxter.add(new Palm("Laura", 5));
         vaxter.add(new Palm("Olof", 1));
         vaxter.add(new Kaktus("Igge", 0.2));
@@ -26,12 +24,12 @@ public class VaxtHotell {
     }
 
     public void printAllaVaxter(){
-        for (Vaxt vaxt: vaxter) { // Går igenom ett växtobjekt i taget i listan och printar ut alla incheckade växter.
+        for (Vaxt vaxt: vaxter) {
             System.out.println(vaxt.getVaxtNamn() + "-" + vaxt.getClass().getSimpleName());
         }
     }
 
-        public void hamtaVaxt() {  //Metod som frågar efter ett växtnamn och visar växtens vätskebehov om den hittas.
+        public void hamtaVaxt() {
         String vaxtNamn = JOptionPane.showInputDialog("Vilken växt ska få vätska?");
 
         if (vaxtNamn == null) {
@@ -39,13 +37,9 @@ public class VaxtHotell {
             return;
         }
 
-        for (Vaxt vaxt: vaxter) { // Går igenom ett växtobjekt i taget i listan.
+        for (Vaxt vaxt: vaxter) {
             if (vaxt.getVaxtNamn().equalsIgnoreCase(vaxtNamn.trim())) {
-                /* Jämför namnen oavsett stora och små bokstäver.
-                trim() tar bort mellanslag i början och slutet av användarens svar.
-                 */
                 JOptionPane.showMessageDialog(null,  vaxt.toString());
-                // Visar växtens beskrivning och avslutar sökmetoden.
                 return;
             }
         }
