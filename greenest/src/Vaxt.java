@@ -1,6 +1,6 @@
 public abstract class Vaxt implements Bevattning{
 
-    protected String vaxtNamn;  //Inkapsling; protected:
+    protected String vaxtNamn;  //Inkapsling; protected
     protected double langd;
 
     public Vaxt(String vaxtNamn, double langd) {
@@ -12,7 +12,7 @@ public abstract class Vaxt implements Bevattning{
     public String getVaxtNamn() { //arv
         return vaxtNamn;
     }
-    //arv
+
 
 
 
